@@ -11,7 +11,11 @@ class SitioController extends Controller
         echo "Hola a todos";
     }
 
-    public function saludar(Request $request, $nombre) {
-        echo "Hola " . $nombre;
+    public function saludar(Request $request, $nombre, $edad = false) {
+        echo "Hola " . $nombre.". ";
+        if ($edad) {
+            echo "Tienes ". $edad . " años.";
+        }
     }
+
 }
